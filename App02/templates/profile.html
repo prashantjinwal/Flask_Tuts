@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile page</title>
+</head>
+<body>
+    <h2>Welcome to profile page {{name}}</h2>
+    {% if isTopper %}
+    <p>You are topper in your class</p>
+    {% else %}
+    <p>you need to hard work</p>
+    {% endif %}
+
+    {% for subject in subjects %}
+        <li>{{subject}}</li>
+    {% endfor %}
+
+</body>
+</html>
