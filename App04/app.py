@@ -11,9 +11,9 @@ def register():
         name = form.name.data
         email = form.email.data
         flash(f"Welcome {name}. you register successfuly !!", "success")
-        return redirect(url_for("success"))
+        return redirect(url_for("success", name=name))
     return render_template("register.html", form=form)
 
-@app.route("/success")
-def success():
-    return render_template("success.html")
+@app.route("/success/<name>")
+def success(name):
+    return render_template("success.html",name=name )
