@@ -1,0 +1,211 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== COMMON ===== */
+.continer {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.btn {
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #4338ca;
+}
+
+.small-btn {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.small-btn:hover {
+    background: #15803d;
+}
+
+.clear-btn {
+    background: #dc2626;
+    margin-top: 10px;
+}
+
+.clear-btn:hover {
+    background: #b91c1c;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #111827;
+    padding: 15px 0;
+}
+
+header h2 {
+    color: #fff;
+}
+
+header .continer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    margin-top: 30px;
+}
+
+/* ===== FLASH MESSAGES ===== */
+.flash {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    animation: fadeIn 0.4s ease;
+}
+
+.flash.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.flash.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ===== LOGIN ===== */
+.login-box {
+    max-width: 400px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #d1d5db;
+}
+
+/* ===== TASK BOX ===== */
+.task-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background: #f3f4f6;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge.completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #111827;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

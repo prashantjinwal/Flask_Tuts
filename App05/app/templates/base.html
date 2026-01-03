@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} To-do App  {% endblock %} </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" >
+</head>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<body>
+    <header>
+        <div class="continer">
+            <h2>My To-do App</h2>
+            <nav>
+                <a href="{{url_for('tasks.view_tasks')}}">Home</a>
+                {% if 'user' in session %}
+                    <a href="{{url_for('auth.logout')}}">Logout</a>
+                {% else %}
+                    <a href="{{url_for('auth.login')}}">Login</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <main class="continer">
+        {% with messages = get_flashed_messages(with_categories = True) %}
+            {% for category, message in messages %}
+                <div class="flash {{category}} ">{{message}} </div>
+            {% endfor %}
+
+        {% endwith %}
+
+    {% block content %}{% endblock %}
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 My Flask Todo-App </p>
+        </div>
+    </footer>
+
+
+    
+</body>
+</html>
